@@ -1,13 +1,13 @@
 {
   "name": "mern-stack",
   "version": "1.0.0",
-  "description": "first mern stack web application",
+  "description": "kanyonyarimada-backend",
   "main": "index.js",
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js"
   },
-  "author": "aos",
+  "author": "byNovacy",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
