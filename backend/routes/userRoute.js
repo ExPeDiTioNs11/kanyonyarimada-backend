@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post('/register', user_register);
 router.post('/login', user_login);
-router.get('/getUser', userControl, get_user);
-router.get('/getmyInfo', userControl, get_myInfo)
+router.get('/getUser', get_user);
+router.get('/getmyInfo', get_myInfo)
 
 module.exports = router
