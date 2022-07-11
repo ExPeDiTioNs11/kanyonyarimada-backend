@@ -5,9 +5,9 @@ const router = express.Router();
 const { userControl } = require('../middlewares/authMiddleware');
 
 // zincirleme route oluşturma
-router.route('/').get( userControl, get_product).post(userControl ,addNewProduct); 
-router.route('/:id').put(userControl ,update_selected_product).delete(userControl ,delete_selected_product);
-router.route('/:barcode').get(userControl, getByBarcode);
+router.route('/').get(get_product).post(addNewProduct); 
+router.route('/:id').put(update_selected_product).delete(delete_selected_product);
+router.route('/:barcode').get(getByBarcode);
 
 
 module.exports = router;
