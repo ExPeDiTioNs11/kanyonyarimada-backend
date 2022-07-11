@@ -1,0 +1,6 @@
+project start
+
+* npm start (Tek bir defa çalıştırıp durdurur)
+* nodemon run server (Çalıştırır ve anlık olarak güncellemeleri yansıtır proje açık kalır - kapatmak için control + C tuşları kullanılmalıdır)
+
+
