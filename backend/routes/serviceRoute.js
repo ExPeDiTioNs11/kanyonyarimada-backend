@@ -4,8 +4,8 @@ const { userControl } = require('../middlewares/authMiddleware')
 const router = express.Router();
 
 // zincirleme route oluşturma
-router.route('/').get( userControl, getService).post(userControl ,add_new_service); 
-router.route('/:id').put(userControl ,update_service).delete(userControl ,deleteService);
+router.route('/').get(getService).post(add_new_service); 
+router.route('/:id').put(update_service).delete(deleteService);
 
 
 module.exports = router
