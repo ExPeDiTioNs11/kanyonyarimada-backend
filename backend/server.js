@@ -34,7 +34,8 @@ const serverFunc = () =>
 // body verisini serverinde yakalayabilmesi için bu urlencodded kullanılır
 app.use(express.urlencoded({extended:true})); // ya da extended : false durumu vardır
 app.use(express.json());
-
+app.use(cors());
+app.options('*', cors());
 app.use('/api/product', require('./routes/productRoute')); // product route
 app.use('/api/users', require('./routes/userRoute')); // user route
 app.use('/api/customers', require('./routes/customerRoute')) // customer route
