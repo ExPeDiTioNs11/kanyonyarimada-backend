@@ -17,6 +17,8 @@ const connection = require('./config/db')
 //colors paketi ile console ekranımızda ki hata mesajlarımızı renkledırdık
 const colors = require('colors')
 
+const cors = require('cors')
+
 // express i çağarmış oluyoruz
 const app = express();
 
