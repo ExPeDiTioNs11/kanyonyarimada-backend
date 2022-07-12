@@ -13,6 +13,7 @@ const get_product = asynchandler(async (req, res) => {
 
 })
 
+// get by barcode
 const getByBarcode = asynchandler(async (req, res) => {
 
     const product = await productModel.findOne({barcode: {$in: req.params.barcode}})
@@ -20,6 +21,21 @@ const getByBarcode = asynchandler(async (req, res) => {
     {
         res.status(400)
         throw Error('Ürün listelenemedi, Barkod değerine ulaşılamıyor')
+    }
+    else
+    {
+        res.status(200).json(product)
+    }
+})
+
+// get by id
+const getById = asynchandler(async (req, res) => {
+
+    const product = await productModel.findById(req.params.id);
+    if(!product)
+    {
+        res.status(400)
+        throw Error('Ürün getirilemedi, Id değerine ulaşılamıyor')
     }
     else
     {
@@ -97,5 +113,6 @@ module.exports =
     addNewProduct, // export create new product
     update_selected_product, // export update selected product
     delete_selected_product, // export delete selected product
-    getByBarcode // export, get product by barcode value
+    getByBarcode, // export, get product by barcode value
+    getById // export, get product by id value
 }
