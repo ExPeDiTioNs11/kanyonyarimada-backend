@@ -6,6 +6,26 @@ const order_schema = mongoose.Schema({
         type: String, // veri tipini belirtiyoruz
         required:[true, 'ürünün satışı şuan da yapılamıyor, id verisi yok'] // boş geçilemez anlamına gelir
     },
+    
+     name: {
+        type: String, // veri tipini belirtiyoruz
+        required:[true, 'ürünün satışı şuan da yapılamıyor, ürünün adı yok'] // boş geçilemez anlamına gelir
+    },
+    
+     emei: {
+        type: String, // veri tipini belirtiyoruz
+        required:false 
+    },
+    
+     emei2: {
+        type: String, // veri tipini belirtiyoruz
+        required:false 
+    },
+    
+     desc: {
+        type: String, // veri tipini belirtiyoruz
+        required:false 
+    },
 
     customerFullname: {
         type: String, // veri tipini belirtiyoruz
