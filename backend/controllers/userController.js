@@ -117,7 +117,7 @@ const delete_selected_user = asynchandler(async (req, res) => {
     else
     {
         await deleteUser.remove(); // databse den id sini seçtiğimiz kaydı siler
-        res.status(200).json(user.username + ' kullanıcısı silindi!');
+        res.status(200).json(deleteUser.username + ' kullanıcısı silindi!');
     }
 })
 
