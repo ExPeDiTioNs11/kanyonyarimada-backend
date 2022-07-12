@@ -107,16 +107,16 @@ const get_myInfo = asynchandler(async (req,res) => {
 
 // delete selected user
 const delete_selected_user = asynchandler(async (req, res) => {
-    const user = await _user.findById(req.params.id);
+    const deleteUser = await _user.findById(req.params.id);
 
-    if(!user)
+    if(!deleteUser)
     {
         res.status(400)
         throw Error('Böyle bir kullanıcı bulunamadı, Lütfen işleminizi kontrol edin!')
     }
     else
     {
-        await user.remove(); // databse den id sini seçtiğimiz kaydı siler
+        await deleteUser.remove(); // databse den id sini seçtiğimiz kaydı siler
         res.status(200).json(user.username + ' kullanıcısı silindi!');
     }
 })
