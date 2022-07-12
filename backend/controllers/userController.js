@@ -107,7 +107,7 @@ const get_myInfo = asynchandler(async (req,res) => {
 
 // delete selected user
 const delete_selected_user = asynchandler(async (req, res) => {
-    const user = await userModel.findById(req.params.id);
+    const user = await _user.findById(req.params.id);
 
     if(!user)
     {
