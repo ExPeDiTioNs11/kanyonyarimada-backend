@@ -7,6 +7,6 @@ router.post('/register', user_register);
 router.post('/login', user_login);
 router.get('/getUser', get_user);
 router.get('/getmyInfo', get_myInfo);
-router.route('/:id').delete(delete_selected_user);
+router.delete('/:id', delete_selected_user);
 
 module.exports = router
