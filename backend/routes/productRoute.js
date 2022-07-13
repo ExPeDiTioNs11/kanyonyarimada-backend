@@ -7,6 +7,6 @@ const { userControl } = require('../middlewares/authMiddleware');
 // zincirleme route oluşturma
 router.route('/').get(get_product).post(addNewProduct); 
 router.route('/:id').put(update_selected_product).delete(delete_selected_product).get(getById);
-router.route('/:barcode').get(getByBarcode);
+router.route('/get-by-barcode/:barcode').get(getByBarcode);
 
 module.exports = router;
