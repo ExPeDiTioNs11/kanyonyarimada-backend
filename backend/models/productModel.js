@@ -15,7 +15,7 @@ const product_schema = mongoose.Schema({
     },
 
     barcode: {
-        type: String,
+        type: Number,
         required: [true, 'Barkod boş geçilemez'] // barcode boş geçilemez
     },
 
