@@ -16,7 +16,7 @@ const get_product = asynchandler(async (req, res) => {
 // get by barcode
 const getByBarcode = asynchandler(async (req, res) => {
 
-    const product = await productModel.findOne({barcode: req.params.barcode})
+    const product = await productModel.findOne({barcode: {$in: req.params.barcode}})
     if(!product)
     {
         res.status(400)
