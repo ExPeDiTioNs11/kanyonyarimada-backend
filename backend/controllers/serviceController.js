@@ -11,6 +11,21 @@ const getService = asyncHandler(async (req, res) => {
 
 })
 
+// get by id
+const getById = asynchandler(async (req, res) => {
+
+    const service = await serviceModel.findById(req.params.id);
+    if(!service)
+    {
+        res.status(400)
+        throw Error('Ürün getirilemedi, Id değerine ulaşılamıyor')
+    }
+    else
+    {
+        res.status(200).json(service)
+    }
+})
+
 // create new service
 const add_new_service = asyncHandler(async (req, res) => {
 
@@ -75,5 +90,6 @@ module.exports =
     getService, // export list service
     add_new_service, // add new service
     update_service, // update service
-    deleteService // delete service
+    deleteService, // delete service
+    getById
 }
