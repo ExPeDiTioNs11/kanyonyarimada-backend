@@ -14,11 +14,11 @@ const getService = asyncHandler(async (req, res) => {
 // get by id
 const getByIdService = asynchandler(async (req, res) => {
 
-    const service = await serviceModel.findById(req.params.id);
+    const service = await productModel.findById(req.params.id);
     if(!service)
     {
         res.status(400)
-        throw Error('servis kaydı getirelemedi, Id değerine ulaşılamıyor')
+        throw Error('Ürün getirilemedi, Id değerine ulaşılamıyor')
     }
     else
     {
