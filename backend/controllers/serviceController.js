@@ -12,7 +12,7 @@ const getService = asyncHandler(async (req, res) => {
 })
 
 // get by id
-const getByIdService = asynchandler(async (req, res) => {
+const getByIdService = asyncHandler(async (req, res) => {
 
     const service = await serviceModel.findById(req.params.id);
     if(!service)
@@ -87,10 +87,9 @@ const deleteService = asyncHandler(async (req, res) => {
 
 module.exports = 
 {
-    getByIdService,
     getService, // export list service
     add_new_service, // add new service
     update_service, // update service
-    deleteService // delete service
-    
+    deleteService, // delete service
+    getByIdService
 }
