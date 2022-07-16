@@ -14,7 +14,7 @@ const getService = asyncHandler(async (req, res) => {
 // get by id
 const getByIdService = asynchandler(async (req, res) => {
 
-    const service = await productModel.findById(req.params.id);
+    const service = await serviceModel.findById(req.params.id);
     if(!service)
     {
         res.status(400)
