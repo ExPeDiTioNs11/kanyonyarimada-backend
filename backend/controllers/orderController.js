@@ -25,7 +25,7 @@ const create_new_order = asynchandler(async (req, res) => {
     else
     {
         
-        if(!req.body.customerFullname && !req.body.customerPhonenumber && !req.body.customerAdress && !req.body.quantity  && !req.body.discount  && !req.body.amount)
+        if(!req.body.customerFullname && !req.body.customerPhonenumber && !req.body.customerAdress && !req.body.quantity  && !req.body.amount)
         {
             res.status(400)
             throw new Error("boş alan bırakmayınız")
@@ -39,6 +39,10 @@ const create_new_order = asynchandler(async (req, res) => {
                     customerFullname: req.body.customerFullname,
                     customerPhonenumber: req.body.customerPhonenumber,
                     customerAdress: req.body.customerAdress,
+                    name: req.body.name,
+                    desc: req.body.desc,
+                    emei: req.body.emei,
+                    emei2: req.body.emei2,
                     quantity: req.body.quantity,
                     discount: req.body.discount,
                     amount: req.body.amount,
