@@ -87,9 +87,10 @@ const deleteService = asyncHandler(async (req, res) => {
 
 module.exports = 
 {
+    getByIdService,
     getService, // export list service
     add_new_service, // add new service
     update_service, // update service
-    deleteService, // delete service
-    getByIdService
+    deleteService // delete service
+    
 }
