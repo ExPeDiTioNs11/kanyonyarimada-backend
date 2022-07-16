@@ -47,11 +47,6 @@ const order_schema = mongoose.Schema({
         required: false // boş geçilebilir
     },
 
-    discount: {
-        type: Number,
-        required: false // boş geçilebilir
-    },
-
     amount: {
         type: Number,
         required: [true, 'Miktar boş bırakılamaz'] // barcode boş geçilemez
