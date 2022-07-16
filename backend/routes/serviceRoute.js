@@ -5,7 +5,8 @@ const router = express.Router();
 
 // zincirleme route oluşturma
 router.route('/').get(getService).post(add_new_service); 
-router.route('/:id').put(update_service).delete(deleteService).get(getByIdService);
+router.route('/:id').put(update_service).delete(deleteService);
+router.route)('/:id').get(getByIdService);
 
 
 module.exports = router
