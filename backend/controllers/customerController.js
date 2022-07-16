@@ -52,27 +52,9 @@ const update_customer = asynchandler(async (req, res) => {
     }
 })
 
-// delete customer
- const delete_customer = asynchandler(async (req, res) => {
-
-    const deleteCustomer = await customerModel.findById(req.params.id)
-
-    if (!deleteCustomer) 
-    {
-        res.status(400)
-        throw new Error('Müşteriyi şuan da silemiyoruz, id değerine ulaşılamıyor.')
-    }
-    else
-    {
-        await deleteCustomer.remove()
-        res.status(200).json(deleteCustomer.name + " isimli müşteri silindi!")
-    }
- })
-
  module.exports = 
  {
      get_allCustomers, // export list customer
      add_new_customer, // export add new customer
-     update_customer,  // update customer
-     delete_customer // delete customer
+     update_customer  // update customer
  }
