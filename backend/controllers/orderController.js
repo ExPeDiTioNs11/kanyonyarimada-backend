@@ -48,8 +48,7 @@ const create_new_order = asynchandler(async (req, res) => {
                     amount: req.body.amount,
         
                 })
-                var newStock = product.stock - 1
-                const down = await productModel.findByIdAndUpdate(req.params.id, {stock: newStock} , {new: true})
+              
                 res.status(200).json(order);
         }  
     }
